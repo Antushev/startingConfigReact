@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>Отслеживание цен</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" type="image/ico" sizes="152x152" href="img/favicon_152x152.ico">
+  <link rel="icon" type="image/ico" sizes="32x32" href="img/favicon_32x32.ico">
+  <link rel="icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__wrapper container">
+        <nav class="menu">
+          <div class="logo">
+            <img class="logo__img" src="img/logo.png" width="264" height="152" alt="Логотип ООО ЕВРОТЕК">
+          </div>
+
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link" href="index.html">Главная</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="stat.html">Статистика</a>
+            </li>
+            <li class="menu__item menu__item--active">
+              <a class="menu__link" href="prices.html">Цены</a>
+            </li>
+          </ul>
+
+          <div class="menu__login">
+            <a class="menu__link-login" href="#">Светлана Павлова</a>
+            <button class="menu__link-login menu__link-login--exit" href="#">Выход</button>
+          </div>
+        </nav>
+      </div>
+
+    </header>
+
+    <main class="page-content">
+      <div class="page-content__wrapper container">
+        <h1 class="header header">Таблица цен</h1>
+
+        <div class="table-price">
+          <div class="table-price__filters">
+            <form class="table-price__search-form">
+              <label class="table-price__name-label">
+                <input class="input table-price__name-input" type="text" placeholder="Название товара">
+                <svg class="icon icon--search table-price__icon-search" width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M24.6451 21.6162L19.8283 16.748C19.6109 16.5283 19.3162 16.4062 19.007 16.4062H18.2194C19.5529 14.6826 20.3452 12.5146 20.3452 10.1562C20.3452 4.5459 15.8473 0 10.296 0C4.74481 0 0.246826 4.5459 0.246826 10.1562C0.246826 15.7666 4.74481 20.3125 10.296 20.3125C12.6296 20.3125 14.7747 19.5117 16.4802 18.1641V18.96C16.4802 19.2725 16.6009 19.5703 16.8184 19.79L21.6352 24.6582C22.0894 25.1172 22.8237 25.1172 23.273 24.6582L24.6403 23.2764C25.0945 22.8174 25.0945 22.0752 24.6451 21.6162ZM10.296 16.4062C6.88027 16.4062 4.11191 13.6133 4.11191 10.1562C4.11191 6.7041 6.87544 3.90625 10.296 3.90625C13.7118 3.90625 16.4802 6.69922 16.4802 10.1562C16.4802 13.6084 13.7166 16.4062 10.296 16.4062Z" fill="black"/>
+                </svg>
+              </label>
+            </form>
+
+            <div class="calendar table-price__calendar">
+              <svg class="icon icon--calendar calendar__icon table-price__icon-calendar" width="42" height="47" viewBox="0 0 42 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.593262 42.5938C0.593262 45.0264 2.54016 47 4.93982 47H36.8146C39.2143 47 41.1611 45.0264 41.1611 42.5938V17.625H0.593262V42.5938ZM29.5703 24.6016C29.5703 23.9957 30.0593 23.5 30.657 23.5H34.2791C34.8767 23.5 35.3657 23.9957 35.3657 24.6016V28.2734C35.3657 28.8793 34.8767 29.375 34.2791 29.375H30.657C30.0593 29.375 29.5703 28.8793 29.5703 28.2734V24.6016ZM29.5703 36.3516C29.5703 35.7457 30.0593 35.25 30.657 35.25H34.2791C34.8767 35.25 35.3657 35.7457 35.3657 36.3516V40.0234C35.3657 40.6293 34.8767 41.125 34.2791 41.125H30.657C30.0593 41.125 29.5703 40.6293 29.5703 40.0234V36.3516ZM17.9795 24.6016C17.9795 23.9957 18.4685 23.5 19.0661 23.5H22.6883C23.2859 23.5 23.7749 23.9957 23.7749 24.6016V28.2734C23.7749 28.8793 23.2859 29.375 22.6883 29.375H19.0661C18.4685 29.375 17.9795 28.8793 17.9795 28.2734V24.6016ZM17.9795 36.3516C17.9795 35.7457 18.4685 35.25 19.0661 35.25H22.6883C23.2859 35.25 23.7749 35.7457 23.7749 36.3516V40.0234C23.7749 40.6293 23.2859 41.125 22.6883 41.125H19.0661C18.4685 41.125 17.9795 40.6293 17.9795 40.0234V36.3516ZM6.38867 24.6016C6.38867 23.9957 6.87766 23.5 7.47531 23.5H11.0974C11.6951 23.5 12.1841 23.9957 12.1841 24.6016V28.2734C12.1841 28.8793 11.6951 29.375 11.0974 29.375H7.47531C6.87766 29.375 6.38867 28.8793 6.38867 28.2734V24.6016ZM6.38867 36.3516C6.38867 35.7457 6.87766 35.25 7.47531 35.25H11.0974C11.6951 35.25 12.1841 35.7457 12.1841 36.3516V40.0234C12.1841 40.6293 11.6951 41.125 11.0974 41.125H7.47531C6.87766 41.125 6.38867 40.6293 6.38867 40.0234V36.3516ZM36.8146 5.875H32.468V1.46875C32.468 0.660937 31.816 0 31.0192 0H28.1215C27.3246 0 26.6726 0.660937 26.6726 1.46875V5.875H15.0818V1.46875C15.0818 0.660937 14.4298 0 13.6329 0H10.7352C9.93836 0 9.28638 0.660937 9.28638 1.46875V5.875H4.93982C2.54016 5.875 0.593262 7.84863 0.593262 10.2812V14.6875H41.1611V10.2812C41.1611 7.84863 39.2143 5.875 36.8146 5.875Z" fill="#BE1E2D"/>
+              </svg>
+              <span class="calendar__date">14.07.2022</span>
+            </div>
+
+            <div class="table-price__excel-download">
+              <svg class="icon" width="36" height="47" viewBox="0 0 36 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.6976 12.4844V0H2.66054C1.46108 0 0.496094 0.982226 0.496094 2.20312V44.7969C0.496094 46.0178 1.46108 47 2.66054 47H32.9628C34.1622 47 35.1272 46.0178 35.1272 44.7969V14.6875H22.862C21.6716 14.6875 20.6976 13.6961 20.6976 12.4844ZM27.5922 31.8866L18.8966 40.6715C18.2969 41.2783 17.3283 41.2783 16.7285 40.6715L8.03287 31.8866C7.11749 30.9622 7.75961 29.375 9.04746 29.375H14.9257V22.0312C14.9257 21.2198 15.5715 20.5625 16.3687 20.5625H19.2546C20.0519 20.5625 20.6976 21.2198 20.6976 22.0312V29.375H26.5759C27.8637 29.375 28.5058 30.9622 27.5922 31.8866ZM34.4959 9.63867L25.6668 0.642578C25.261 0.229492 24.7108 0 24.1336 0H23.5835V11.75H35.1272V11.19C35.1272 10.6117 34.9018 10.0518 34.4959 9.63867Z" fill="#BE1E2D"/>
+              </svg>
+            </div>
+
+            <button class="button button--rounded table-price__button">Добавить товар</button>
+          </div>
+
+          <div class="table-price__table-wrapper">
+            <table class="table table-price__table">
+              <tr class="table__tr">
+                <th class="table__th">Товары</th>
+                <th class="table__th">ЕВРОТЕК</th>
+                <th class="table__th">ПРОМСНАБ</th>
+                <th class="table__th">АТМГ</th>
+                <th class="table__th">RM316</th>
+                <th class="table__th">Гидроэл</th>
+                <th class="table__th">Ингидро</th>
+              </tr>
+
+              <tr class="table__tr">
+                <td class="table__td">Распределитель 1P40</td>
+                <td class="table__td">5000</td>
+                <td class="table__td">
+                  <button class="button button--link button--blue">Выбрать</button>
+                </td>
+                <td class="table__td">
+                  9800
+                  <span>(>4800)</span>
+                </td>
+                <td class="table__td">
+                  <button class="button button--link button--blue">Выбрать</button>
+                </td>
+                <td class="table__td">
+                  <button class="button button--link button--blue">Выбрать</button>
+                </td>
+                <td class="table__td">
+                  <button class="button button--link button--blue">Выбрать</button>
+                </td>
+              </tr>
+
+              <tr class="table__tr">
+                <td class="table__td">Распределитель 1P40</td>
+                <td class="table__td">5000</td>
+                <td class="table__td">
+                  <button class="button button--link button--blue">Выбрать</button>
+                </td>
+                <td class="table__td">
+                  9800
+                  <span>(>4800)</span>
+                </td>
+                <td class="table__td">
+                  <button class="button button--link button--blue">Выбрать</button>
+                </td>
+                <td class="table__td">
+                  <button class="button button--link button--blue">Выбрать</button>
+                </td>
+                <td class="table__td">
+                  <button class="button button--link button--blue">Выбрать</button>
+                </td>
+              </tr>
+
+              <tr class="table__tr">
+                <td class="table__td">Распределитель 1P40</td>
+                <td class="table__td">5000</td>
+                <td class="table__td">
+                  <button class="button button--link button--blue">Выбрать</button>
+                </td>
+                <td class="table__td">
+                  9800
+                  <span>(>4800)</span>
+                </td>
+                <td class="table__td">
+                  <button class="button button--link button--blue">Выбрать</button>
+                </td>
+                <td class="table__td">
+                  <button class="button button--link button--blue">Выбрать</button>
+                </td>
+                <td class="table__td">
+                  <button class="button button--link button--blue">Выбрать</button>
+                </td>
+              </tr>
+
+              <tr class="table__tr">
+                <td class="table__td">Распределитель 1P40</td>
+                <td class="table__td">5000</td>
+                <td class="table__td">
+                  <button class="button button--link button--blue">Выбрать</button>
+                </td>
+                <td class="table__td">
+                  9800
+                  <span>(>4800)</span>
+                </td>
+                <td class="table__td">
+                  <button class="button button--link button--blue">Выбрать</button>
+                </td>
+                <td class="table__td">
+                  <button class="button button--link button--blue">Выбрать</button>
+                </td>
+                <td class="table__td">
+                  <button class="button button--link button--blue">Выбрать</button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper container">
+        <p class="page-footer__contacts">
+          По всем вопросам: +7 (931) 405-04-66
+        </p>
+      </div>
+    </footer>
+
+    <div class="popup-price visually-hidden">
+      <button class="button button--popup popup-price__button-close">
+        <svg class="popup-price__close" width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.5 0C9.1754 0 0 9.1754 0 20.5C0 31.8246 9.1754 41 20.5 41C31.8246 41 41 31.8246 41 20.5C41 9.1754 31.8246 0 20.5 0ZM30.5516 25.8813C30.9401 26.2698 30.9401 26.898 30.5516 27.2865L27.2782 30.5516C26.8897 30.9401 26.2615 30.9401 25.873 30.5516L20.5 25.129L15.1187 30.5516C14.7302 30.9401 14.102 30.9401 13.7135 30.5516L10.4484 27.2782C10.0599 26.8897 10.0599 26.2615 10.4484 25.873L15.871 20.5L10.4484 15.1187C10.0599 14.7302 10.0599 14.102 10.4484 13.7135L13.7218 10.4401C14.1103 10.0516 14.7385 10.0516 15.127 10.4401L20.5 15.871L25.8813 10.4484C26.2698 10.0599 26.898 10.0599 27.2865 10.4484L30.5599 13.7218C30.9484 14.1103 30.9484 14.7385 30.5599 15.127L25.129 20.5L30.5516 25.8813Z" fill="#BE1E2D"/>
+        </svg>
+      </button>
+
+      <div class="popup-price__container">
+        <h2 class="header popup-price__header">
+          Добавление ссылки на товар
+        </h2>
+        <ul class="popup-price__list">
+          <li class="popup-price__item">
+            Конкурент:
+            <span class="popup-price__span">
+            ПРОМСНАБ
+          </span>
+          </li>
+          <li class="popup-price__item">
+            Сайт конкурента:
+            <span class="popup-price__span">
+            shop.spb-promsnab.ru
+          </span>
+          </li>
+          <li class="popup-price__item">
+            Сопоставляемый товар:
+            <span class="popup-price__span">
+            Распределитель 1P40
+          </span>
+          </li>
+        </ul>
+      </div>
+
+      <form>
+        <div class="popup-price__push-wrapper popup-price__container popup-price__container--push">
+          <input class="input popup-price__input-push" id="popup-push" name="popup-push" type="checkbox" alt="Включить уведомления на почту">
+          <label class="popup-price__label-push" for="popup-push">Уведомлять об изменении цены по почте pochta@eurotechspb.com</label>
+        </div>
+
+        <div class="popup-price__link-wrapper popup-price__container">
+          <h2 class="header header--2">Добавьте ссылку на товар с сайта конкурента</h2>
+          <label class="popup-price__label popup-price__label--link" for="add-info">
+            Ссылка может вести на товар конкурента на его сайте или же на товар из маркетплейса (например, Ozon).
+            На один отслеживаемый товар может вести только одна ссылка на товар компании-конкурента.
+          </label>
+          <div class="popup-price__link-inner">
+            <input class="input popup-price__input" id="add-info" name="popup-link" type="text" alt="Ссылка на товар с сайта конкурента" placeholder="Ссылка на товар с сайта конкурента">
+            <button class="button popup-price__button-link" type="button">Проверить</button>
+          </div>
+        </div>
+
+        <div class="popup-price__price-wrapper popup-price__container">
+          <h2 class="header header--2">Выберите цену для отслеживания</h2>
+          <p class="popup-price__radio-info">
+            Ниже представлены данные, которые были найдены в результате анализа страницы
+            <a class="link" href="https://shop.spb-promsnab.ru/shop/brs/bystrorazemnye/brs_rozetka_dn06_1-4_bsp_101_12111ab.html" target="_blank">https://shop.spb-promsnab.ru/shop/brs/bystrorazemnye/brs_rozetka_dn06_1-4_bsp_101_12111ab.html</a>.\
+            Выберите число, которое соответсвует отслеживаемой цене с сайта компании-конкурента.
+          </p>
+          <input class="popup-price__price-radio" id="popup-price-info-1" name="popup-price" type="radio" alt="Отслеживаемая цена">
+          <label class="popup-price__price-label" for="popup-price-info-1">7000</label>
+          <input class="popup-price__price-radio" id="popup-price-info-2" name="popup-price" type="radio" alt="Отслеживаемая цена">
+          <label class="popup-price__price-label" for="popup-price-info-2">6800,49</label>
+          <input class="popup-price__price-radio" id="popup-price-info-3" name="popup-price" type="radio" alt="Отслеживаемая цена">
+          <label class="popup-price__price-label" for="popup-price-info-3">8310,14</label>
+        </div>
+
+        <button class="popup-price__button button" type="submit">Применить</button>
+      </form>
+    </div>
+
+    <div class="popup-good visually-hidden">
+      <button class="button button--popup popup-good__button-close">
+        <svg class="popup-price__close" width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.5 0C9.1754 0 0 9.1754 0 20.5C0 31.8246 9.1754 41 20.5 41C31.8246 41 41 31.8246 41 20.5C41 9.1754 31.8246 0 20.5 0ZM30.5516 25.8813C30.9401 26.2698 30.9401 26.898 30.5516 27.2865L27.2782 30.5516C26.8897 30.9401 26.2615 30.9401 25.873 30.5516L20.5 25.129L15.1187 30.5516C14.7302 30.9401 14.102 30.9401 13.7135 30.5516L10.4484 27.2782C10.0599 26.8897 10.0599 26.2615 10.4484 25.873L15.871 20.5L10.4484 15.1187C10.0599 14.7302 10.0599 14.102 10.4484 13.7135L13.7218 10.4401C14.1103 10.0516 14.7385 10.0516 15.127 10.4401L20.5 15.871L25.8813 10.4484C26.2698 10.0599 26.898 10.0599 27.2865 10.4484L30.5599 13.7218C30.9484 14.1103 30.9484 14.7385 30.5599 15.127L25.129 20.5L30.5516 25.8813Z" fill="#BE1E2D"/>
+        </svg>
+      </button>
+
+      <h2 class="header popup-good__container">Добавление товара</h2>
+
+      <form>
+        <div class="popup-good__container">
+          <label class="popup-good__label" for="popup-name">
+            Введите название товара, которое будет отображаться в общей таблице товаров.
+            Название товара может быть любое.
+          </label>
+          <input class="input popup-good__input" id="popup-name" name="popup-name" type="text" alt="Введите название товара" placeholder="Введите название товара">
+        </div>
+
+        <button class="button popup-good__button">Применить</button>
+      </form>
+    </div>
+
+    <div class="popup-company visually-hidden">
+      <button class="button button--popup popup-company__button-close">
+        <svg class="popup-price__close" width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.5 0C9.1754 0 0 9.1754 0 20.5C0 31.8246 9.1754 41 20.5 41C31.8246 41 41 31.8246 41 20.5C41 9.1754 31.8246 0 20.5 0ZM30.5516 25.8813C30.9401 26.2698 30.9401 26.898 30.5516 27.2865L27.2782 30.5516C26.8897 30.9401 26.2615 30.9401 25.873 30.5516L20.5 25.129L15.1187 30.5516C14.7302 30.9401 14.102 30.9401 13.7135 30.5516L10.4484 27.2782C10.0599 26.8897 10.0599 26.2615 10.4484 25.873L15.871 20.5L10.4484 15.1187C10.0599 14.7302 10.0599 14.102 10.4484 13.7135L13.7218 10.4401C14.1103 10.0516 14.7385 10.0516 15.127 10.4401L20.5 15.871L25.8813 10.4484C26.2698 10.0599 26.898 10.0599 27.2865 10.4484L30.5599 13.7218C30.9484 14.1103 30.9484 14.7385 30.5599 15.127L25.129 20.5L30.5516 25.8813Z" fill="#BE1E2D"/>
+        </svg>
+      </button>
+
+      <h2 class="header popup-company__container">Добавлении компании</h2>
+
+      <div class="popup-company__container">
+        <form>
+          <label class="popup-company__label" for="popup-name-company">
+            Введите название компании, которое будет отображаться в общей таблице товаров.
+          </label>
+          <input class="input popup-company__input" id="popup-name-company" name="popup-name-company" type="text" alt="Введите название компании для добавления" placeholder="Название компании">
+          <label class="popup-company__label popup-company__label--check" for="popup-link-site">
+            Скопируйте ссылку на главную страницу интернет-магазина компании конкурента.
+          </label>
+          <input class="input popup-company__input" id="popup-link-site" name="popup-link-site" type="text" alt="Скопируйте ссылку на главную страницу интернет-магазина компании-конкурента" placeholder="Ссылка на интернет-магазин">
+        </form>
+      </div>
+
+      <button class="button popup-company__button">Применить</button>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/script.min.js"></script>
+  </body>
+</html>
